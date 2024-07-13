@@ -24,7 +24,7 @@ const ProductForm = ({ onProductAdded, product, onProductUpdated, onEditEnd }) =
     };
 
     if (product) {
-      axios.put(`http://localhost:5173/api/products/${product._id}`, newProduct)
+      axios.put(`https://internship-crud-app-backend.vercel.app/api/products/${product._id}`, newProduct)
         .then(response => {
           onProductUpdated();
           onEditEnd();
@@ -33,7 +33,7 @@ const ProductForm = ({ onProductAdded, product, onProductUpdated, onEditEnd }) =
           console.error('There was an error updating the product!', error);
         });
     } else {
-      axios.post('http://localhost:5173/api/products', newProduct)
+      axios.post('https://internship-crud-app-backend.vercel.app/api/products', newProduct)
         .then(response => {
           onProductAdded();
           setName('');

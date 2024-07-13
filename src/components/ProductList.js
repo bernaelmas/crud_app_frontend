@@ -7,7 +7,7 @@ const ProductList = () => {
   const [editingProduct, setEditingProduct] = useState(null);
 
   const fetchProducts = () => {
-    axios.get('http://localhost:5173/api/products')
+    axios.get('https://internship-crud-app-backend.vercel.app/api/products')
       .then(response => {
         setProducts(response.data);
       })
@@ -17,7 +17,7 @@ const ProductList = () => {
   };
 
   const deleteProduct = (id) => {
-    axios.delete(`http://localhost:5173/api/products/${id}`)
+    axios.delete(`https://internship-crud-app-backend.vercel.app/api/products/${id}`)
       .then(response => {
         fetchProducts();
       })
