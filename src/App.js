@@ -1,14 +1,13 @@
-// src/App.js
-
 import React, { useState } from 'react';
 import ProductList from './components/ProductList';
 import ProductForm from './components/ProductForm';
+import './App.css';
 
 const App = () => {
   const [updateList, setUpdateList] = useState(false);
 
   const handleProductAdded = () => {
-    setUpdateList(!updateList); // Listeyi yeniden yükle
+    setUpdateList(!updateList);
   };
 
   return (

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './ProductForm.css';
 
 const ProductForm = ({ onProductAdded, product, onProductUpdated, onEditEnd }) => {
   const [name, setName] = useState('');
@@ -47,7 +48,7 @@ const ProductForm = ({ onProductAdded, product, onProductUpdated, onEditEnd }) =
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form  className='form-container' onSubmit={handleSubmit}>
       <div>
         <label>Product Name:</label>
         <input 
@@ -79,6 +80,7 @@ const ProductForm = ({ onProductAdded, product, onProductUpdated, onEditEnd }) =
       {product && <button type="button" onClick={onEditEnd}>Cancel</button>}
     </form>
   );
+  
 };
 
 export default ProductForm;

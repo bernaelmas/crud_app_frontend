@@ -1,0 +1,39 @@
+.list-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+
+}
+
+.list-container ul {
+    list-style-type: none ;
+    padding: 0;
+
+}
+
+.list-container li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.list-container li:last-child {
+    border-bottom: none;
+}
+
+.list-container button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: #fff;
+    cursor: pointer;
+}
+
+.list-container button:hover {
+    background-color: #c82333 ;
+}

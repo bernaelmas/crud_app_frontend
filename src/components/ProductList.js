@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductForm from './ProductForm';
+import './ProductList.css';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -39,13 +40,22 @@ const ProductList = () => {
   }, []);
 
   return (
-    <div>
+    <div className='list-container'>
       <h2>Product List</h2>
       {products.length === 0 ? <p>No products found.</p> : null}
       <ul>
         {products.map(product => (
           <li key={product._id}>
-            {product.name} - {product.quantity} - ${product.price}
+            <p>
+            {product.name} 
+            </p>
+            <p>
+            {product.quantity} 
+            </p>
+            <p>
+            {product.price} 
+            </p>
+
             <button onClick={() => startEditing(product)}>Edit</button>
             <button onClick={() => deleteProduct(product._id)}>Delete</button>
           </li>
